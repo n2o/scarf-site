@@ -1,2 +1,3 @@
-# scarf-site ![https://circleci.com/gh/n2o/scarf-site/tree/master.png](https://circleci.com/gh/n2o/scarf-site)
+# scarf-site [![CircleCI](https://img.shields.io/circleci/project/github/n2o/scarf-site.svg)]()
+
 Static website for scarf-cljs
