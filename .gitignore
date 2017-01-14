@@ -12,3 +12,5 @@ pom.xml.asc
 /resources/public/
 bower_components/
 .nrepl-port
+.sass-cache/
+*.sassc
