@@ -12,7 +12,35 @@
 </head>
 <body>
 
-  <div class="navbar navbar-toggleable-md navbar-inverse bg-primary">
+  <nav class="navbar navbar-toggleable-md navbar-inverse bg-primary">
+    <div class="container">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="#">Halstuchkonfigurator</a>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Kontakt</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="jumbotron">
+    <div class="container">
+      <h1 class="display-3">Dein persönliches Halstuch!</h1>
+      <p>Hier kannst du aus verschiedenen Schnittmustern und Farben dein individuelles Halstuch konfigurieren und über den Ausrüster bestellen.</p>
+      <p><a class="btn btn-primary btn-lg" href="#" role="button">Zum Konfigurator &raquo;</a></p>
+    </div>
+  </div>
+
+  <!-- <div class="navbar navbar-toggleable-md navbar-inverse bg-primary">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -37,7 +65,7 @@
         </ul>
       </div>
     </div>
-  </div>
+  </div> -->
 
 
   <div class="container">
@@ -47,30 +75,18 @@
         <div class="col-lg-8 col-md-7 col-sm-6">
           <h1>Yeti</h1>
           <p class="lead">A friendly foundation</p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-3 col-md-3 col-sm-4">
-          <div class="list-group table-of-contents">
-            <a class="list-group-item list-group-item-action" href="#navbars">Navbars</a>
-            <a class="list-group-item list-group-item-action" href="#buttons">Buttons</a>
-            <a class="list-group-item list-group-item-action" href="#typography">Typography</a>
-            <a class="list-group-item list-group-item-action" href="#tables">Tables</a>
-            <a class="list-group-item list-group-item-action" href="#forms">Forms</a>
-            <a class="list-group-item list-group-item-action" href="#navs">Navs</a>
-            <a class="list-group-item list-group-item-action" href="#indicators">Indicators</a>
-            <a class="list-group-item list-group-item-action" href="#progress">Progress</a>
-            <a class="list-group-item list-group-item-action" href="#containers">Containers</a>
-            <a class="list-group-item list-group-item-action" href="#dialogs">Dialogs</a>
+          <div id="content">
+            {% block content %}
+            {% endblock %}
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <script src="bower_components/jquery/dist/jquery.min.js"></script>
-  <script src="bower_components/tether/dist/js/tether.min.js"></script>
-  <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  {% script "bower_components/jquery/dist/jquery.min.js" %}
+  {% script "bower_components/tether/dist/js/tether.min.js" %}
+  {% script "bower_components/bootstrap/dist/js/bootstrap.min.js" %}
 
 </body>
 </html>
