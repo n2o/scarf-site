@@ -11,3 +11,4 @@ pom.xml.asc
 .lein-failures
 /resources/public/
 bower_components/
+.nrepl-port
