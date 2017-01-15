@@ -9,4 +9,4 @@ dependencies:
 
 test:
   override:
-    - docker run scarf
+    - docker run scarf -v $CIRCLE_ARTIFACTS:/code/resources/public
