@@ -6,6 +6,8 @@ dependencies:
   override:
     - docker info
     - docker build -t scarf .
+    - curl "https://circleci.com/api/v1.1/project/github/n2o/scarf/latest/artifacts" | jq -r '.[0].url' | xargs wget
+    - mv scarf.js /code/resources/public/js/scarf.js
 
 test:
   override:
